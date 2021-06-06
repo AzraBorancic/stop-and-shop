@@ -8,6 +8,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar";
+import CategoryView from "./pages/Category/CategoryView";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -31,6 +32,9 @@ const AppRouter = () => {
           </Route>
           <Route path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route path="/categories/:category_name">
+            <CategoryView />
           </Route>
         </Switch>
       </div>

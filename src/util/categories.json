@@ -1,0 +1,17 @@
+[
+  { "name": "Fruits and Vegetables", "value": "fruits_and_vegetables" },
+  { "name": "Bread and Pastries", "value": "bread_and_pastries" },
+  { "name": "Eggs and Dairy Products", "value": "eggs_and_dairy_products" },
+  { "name": "Meat and Meat Produce", "value": "meat_and_meat_produce" },
+  { "name": "Base Ingredients", "value": "base_ingredients" },
+  { "name": "Drinks", "value": "drinks" },
+  { "name": "Sweets and Snacks", "value": "sweets_and_snacks" },
+  { "name": "Baby Care", "value": "baby_care" },
+  { "name": "Face and Body Care", "value": "face_and_body_care" },
+  { "name": "Cleaning Agents", "value": "cleaning_agents" },
+  {
+    "name": "Hygiene and Cleaning Products",
+    "value": "hygiene_and_cleaning_products"
+  },
+  { "name": "House Necessities", "value": "house_necessities" }
+]

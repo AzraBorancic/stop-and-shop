@@ -1,0 +1,47 @@
+{
+  "fruits_and_vegetables": [
+    {
+      "name": "Apple",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/265px-Red_Apple.jpg",
+      "price": 1.50
+    },
+    {
+      "name": "Banana",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bananas_white_background_DS.jpg/320px-Bananas_white_background_DS.jpg",
+      "price": 2.50
+    },
+    {
+      "name": "Grapes",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Table_grapes_on_white.jpg/320px-Table_grapes_on_white.jpg",
+      "weight": 0.1,
+      "price": 4.50
+    },
+    {
+      "name": "Pineapple",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
+      "price": 5.00
+    }
+  ],
+  "bread_and_pastries": [
+    {
+      "name": "Bread",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Korb_mit_Br%C3%B6tchen.JPG/1280px-Korb_mit_Br%C3%B6tchen.JPG",
+      "price": 1.00
+    },
+    {
+      "name": "Croissant",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/2018_01_Croissant_IMG_0685.JPG/1280px-2018_01_Croissant_IMG_0685.JPG",
+      "price": 1.50
+    }
+  ],
+  "eggs_and_dairy_products": [],
+  "meat_and_meat_produce": [],
+  "base_ingredients": [],
+  "drinks": [],
+  "sweets_and_snacks": [],
+  "baby_care": [],
+  "face_and_body_care": [],
+  "cleaning_agents": [],
+  "hygiene_and_cleaning_products": [],
+  "house_necessities": []
+}
