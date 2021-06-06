@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css';
 
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar";
 
 // This site has 3 pages, all of which are rendered
