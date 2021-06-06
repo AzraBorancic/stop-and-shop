@@ -42,7 +42,6 @@ const CategoryView = () => {
                             msTransform: "translateY(-50%, -50%)",
                             transform: "translateY(-50%, -50%)"
                         }}
-                        // textAlign={"center"}
                         as={"h3"}>There are no items available in this category.</Header>
                 }
                 <Card.Group stackable itemsPerRow={4}>

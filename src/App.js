@@ -2,13 +2,15 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
+  Route
 } from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css';
 
 import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar";
 import CategoryView from "./pages/Category/CategoryView";
+import {Container} from "semantic-ui-react";
+import Footer from "./components/Footer";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -22,29 +24,33 @@ import CategoryView from "./pages/Category/CategoryView";
 const AppRouter = () => {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
-          <Route path="/categories/:category_name">
-            <CategoryView />
-          </Route>
-        </Switch>
-      </div>
+        <Navbar />
+        <Container style={{height: "auto", minHeight: "51vh", marginTop: '7em'}}>
+            <div>
+                <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/dashboard">
+                        <Dashboard />
+                    </Route>
+                    <Route path="/categories/:category_name">
+                        <CategoryView />
+                    </Route>
+                </Switch>
+            </div>
+        </Container>
+        <Footer />
     </Router>
   )
 }
 
 export default function App() {
   return (
-    <Navbar Slot={AppRouter} />
+    <AppRouter />
   );
 }
 
