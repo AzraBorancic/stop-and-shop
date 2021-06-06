@@ -35,7 +35,7 @@ const Navbar = ({ Slot }) => (
       </Container>
     </Menu>
 
-    <Container text style={{ height: "auto", minHeight: "51vh", marginTop: '7em' }}>
+    <Container style={{ height: "auto", minHeight: "51vh", marginTop: '7em' }}>
       <Slot/>
     </Container>
 
