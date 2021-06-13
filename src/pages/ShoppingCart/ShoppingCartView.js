@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import {Button, Grid, Icon, Image, Input, Table} from "semantic-ui-react";
-import {manageQuantity} from "../../util/local_storage_util";
+import {Button, Confirm, Grid, Header, Icon, Image, Input, Table} from "semantic-ui-react";
+import {manageCart, manageQuantity} from "../../util/local_storage_util";
+import {toast} from "react-semantic-toasts";
+import {useHistory} from "react-router-dom";
 
 const calculateSubtotal = (items) => {
     let subtotal = 0;
@@ -11,11 +13,14 @@ const calculateSubtotal = (items) => {
 }
 
 const ShoppingCartView = () => {
+    let history = useHistory();
     let cart = JSON.parse(localStorage.getItem("cart"));
     const [localCart, setLocalCart] = useState(cart);
+    const [confirm, setConfirm] = useState(false);
 
     return (
-        <Grid>
+        <Grid textAlign={"center"}>
+            <Header as={"h3"}>Shopping Cart</Header>
             <Grid.Row>
                 <Table celled padded>
                     <Table.Header>
@@ -62,15 +67,45 @@ const ShoppingCartView = () => {
                                         <b>{item.price * item.quantity}KM</b>
                                     </Table.Cell>
                                     <Table.Cell>
-                                        <Button animated negative fluid>
+                                        <Button animated negative fluid onClick={() => {
+                                            setConfirm(true);
+                                        }}>
                                             <Button.Content hidden>Remove item?</Button.Content>
                                             <Button.Content visible>
                                                 <Icon name='trash alternate'/>
                                             </Button.Content>
                                         </Button>
+                                        <Confirm
+                                            open={confirm}
+                                            onConfirm={() => {
+                                                manageCart(item, "delete");
+                                                cart = JSON.parse(localStorage.getItem("cart"));
+                                                setLocalCart(cart);
+                                                setConfirm(false);
+                                                toast({
+                                                    type: 'info',
+                                                    icon: 'cart arrow down',
+                                                    title: 'Removed item from cart.',
+                                                    time: 5000
+                                                })
+                                            }}
+                                            onCancel={() => {
+                                                setConfirm(false);
+                                            }}
+                                        />
                                     </Table.Cell>
                                 </Table.Row>
                             })
+                        }
+                        {
+                            !localCart.length &&
+                            <Table.Row>
+                                <Table.Cell colSpan='5' textAlign={"center"}>
+                                    <Header as={"h5"}>
+                                        No items in cart, feel free to add more!
+                                    </Header>
+                                </Table.Cell>
+                            </Table.Row>
                         }
                     </Table.Body>
                 </Table>
@@ -81,6 +116,18 @@ const ShoppingCartView = () => {
                         style={{fontSize: "18px"}}>{
                         calculateSubtotal(localCart)
                     }KM</b></p>
+                </div>
+                <br/>
+                <br/>
+                <div style={{width: "100%"}}>
+                    <Button color={"teal"} style={{float: "left"}} onClick={() => {
+                        history.goBack();
+                    }}>
+                        <Icon name={"arrow left"}/> Continue Shopping
+                    </Button>
+                    <Button color={"teal"} style={{float: "right"}}>
+                        <Icon name={"credit card outline"}/> Proceed to Checkout
+                    </Button>
                 </div>
             </Grid.Row>
         </Grid>

@@ -41,7 +41,7 @@ const AppRouter = () => {
     <Router>
         <SemanticToastContainer />
         <Navbar />
-        <Container style={{height: "auto", minHeight: "51vh", marginTop: '7em'}}>
+        <Container style={{height: "auto", minHeight: "51vh", marginTop: '10em'}}>
             <div>
                 <Switch>
                     <Route exact path="/">
