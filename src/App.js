@@ -21,6 +21,7 @@ import CategoryView from "./pages/Category/CategoryView";
 import {Container} from "semantic-ui-react";
 import Footer from "./components/Footer";
 import ShoppingCartView from "./pages/ShoppingCart/ShoppingCartView";
+import CheckoutView from "./pages/Checkout/CheckoutView";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -52,6 +53,9 @@ const AppRouter = () => {
                     </Route>
                     <Route path="/shopping_cart">
                         <ShoppingCartView />
+                    </Route>
+                    <Route path="/checkout">
+                        <CheckoutView />
                     </Route>
                 </Switch>
             </div>

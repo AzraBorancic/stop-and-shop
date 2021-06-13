@@ -125,7 +125,9 @@ const ShoppingCartView = () => {
                     }}>
                         <Icon name={"arrow left"}/> Continue Shopping
                     </Button>
-                    <Button color={"teal"} style={{float: "right"}}>
+                    <Button color={"teal"} style={{float: "right"}} onClick={() => {
+                        history.push("/checkout");
+                    }}>
                         <Icon name={"credit card outline"}/> Proceed to Checkout
                     </Button>
                 </div>
