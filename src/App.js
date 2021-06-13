@@ -5,12 +5,22 @@ import {
   Route
 } from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css';
+import 'semantic-ui-css/components/reset.min.css';
+import 'semantic-ui-css/components/site.min.css';
+import 'semantic-ui-css/components/container.min.css';
+import 'semantic-ui-css/components/icon.min.css';
+import 'semantic-ui-css/components/message.min.css';
+import 'semantic-ui-css/components/header.min.css';
+
+import { SemanticToastContainer } from 'react-semantic-toasts';
+import 'react-semantic-toasts/styles/react-semantic-alert.css';
 
 import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar";
 import CategoryView from "./pages/Category/CategoryView";
 import {Container} from "semantic-ui-react";
 import Footer from "./components/Footer";
+import ShoppingCartView from "./pages/ShoppingCart/ShoppingCartView";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -21,9 +31,15 @@ import Footer from "./components/Footer";
 // making sure things like the back button and bookmarks
 // work properly.
 
+if (!localStorage.getItem("cart")) {
+    let cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 const AppRouter = () => {
   return (
     <Router>
+        <SemanticToastContainer />
         <Navbar />
         <Container style={{height: "auto", minHeight: "51vh", marginTop: '7em'}}>
             <div>
@@ -31,14 +47,11 @@ const AppRouter = () => {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/dashboard">
-                        <Dashboard />
-                    </Route>
-                    <Route path="/categories/:category_name">
+                    <Route path="/categories/:category_name/:item_id?">
                         <CategoryView />
+                    </Route>
+                    <Route path="/shopping_cart">
+                        <ShoppingCartView />
                     </Route>
                 </Switch>
             </div>
@@ -51,24 +64,5 @@ const AppRouter = () => {
 export default function App() {
   return (
     <AppRouter />
-  );
-}
-
-// You can think of these components as "pages"
-// in your app.
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
   );
 }
