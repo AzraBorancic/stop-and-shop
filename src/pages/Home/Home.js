@@ -12,17 +12,39 @@ const categories = [
         "name": "Fruits and Vegetables",
         "image": <Image size="large" src={fruitImage}/>
     },
-    {name: 'Bread and Pastries', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Eggs and Dairy Products', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Meat and Meat Produce', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Base Ingredients', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Drinks', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Sweets and Snacks', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Baby Care', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Face and Body Care', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Cleaning Agents', image: <Image size="large" src={fruitImage}/>},
-    {name: 'Hygiene and Cleaning Products', image: <Image size="large" src={fruitImage}/>},
-    {name: 'House Necessities', image: <Image size="large" src={fruitImage}/>}
+    {name: 'Bread and Pastries', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/pastriesAndCakes.jpg"
+        }/>},
+    {name: 'Eggs and Dairy Products', image: <Image size="large" src={
+            "https://amkoshop.ba/assets/img/categories/dairyAndEggs.jpg"
+        }/>},
+    {name: 'Meat and Meat Produce', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/meatAndMeatProducts.jpg"
+        }/>},
+    {name: 'Base Ingredients', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/grocieriesForFoodMaking.jpg"
+        }/>},
+    {name: 'Drinks', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/drinks.jpg"
+        }/>},
+    {name: 'Sweets and Snacks', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/sweetsAndSnacks.jpg"
+        }/>},
+    {name: 'Baby Care', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/babyProgram.jpg"
+        }/>},
+    {name: 'Face and Body Care', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/bodyAndFaceCare.jpg"
+        }/>},
+    {name: 'Cleaning Agents', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/cleaningAgents.jpg"
+        }/>},
+    {name: 'Hygiene and Cleaning Products', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/higeneAndPaperProducts.jpg"
+        }/>},
+    {name: 'House Necessities', image: <Image size="large" src={
+        "https://amkoshop.ba/assets/img/categories/houseNecessities.jpg"
+        }/>}
 ]
 
 const Home = () => {

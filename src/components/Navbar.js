@@ -37,14 +37,7 @@ const Navbar = () => {
                                    history.push("/shopping_cart");
                                }}
                     >
-                        <Icon size="large" name="shopping cart"/>
-                    </Menu.Item>
-                    <Menu.Item as='a' style={{marginRight: "-10px"}}
-                               onClick={() => {
-                                   history.push("/sign_in");
-                               }}
-                    >
-                        <Icon size="large" name="sign in"/>
+                        <Icon size="large" name="shopping cart"/> Shopping Cart
                     </Menu.Item>
                 </Container>
             </Menu>

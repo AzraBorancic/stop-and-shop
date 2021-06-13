@@ -46,9 +46,41 @@
       "quantity": 1
     }
   ],
-  "eggs_and_dairy_products": [],
-  "meat_and_meat_produce": [],
-  "base_ingredients": [],
+  "eggs_and_dairy_products": [
+    {
+      "id": 7,
+      "name": "Milk",
+      "image": "https://eurobit-wsh.s3.eu-west-1.amazonaws.com/prod/product/112754/112754,.png",
+      "price": 1.50,
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "name": "Chocolate Milk",
+      "image": "https://eurobit-wsh.s3.eu-west-1.amazonaws.com/prod/product/136401/136401.png",
+      "price": 1.50,
+      "quantity": 1
+    }
+  ],
+  "meat_and_meat_produce": [
+    {
+      "id": 9,
+      "name": "Sausage",
+      "image": "https://eurobit-wsh.s3.eu-west-1.amazonaws.com/prod/product/131400/131400.png",
+      "price": 12.65,
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "name": "Cut Meat",
+      "image": "https://eurobit-wsh.s3.eu-west-1.amazonaws.com/prod/product/116784/116784.png",
+      "price": 1.65,
+      "quantity": 1
+    }
+  ],
+  "base_ingredients": [
+
+  ],
   "drinks": [],
   "sweets_and_snacks": [],
   "baby_care": [],
