@@ -34,6 +34,20 @@ const CheckoutView = () => {
     const handlePayment = () => {
         if (form.saveData) {
             localStorage.setItem("user_data", JSON.stringify(form));
+        } else {
+            localStorage.setItem("user_data", JSON.stringify({
+                fullName: "",
+                email: "",
+                address: "",
+                city: "",
+                state: "",
+                zip: "",
+                cardHolderName: "",
+                cardNumber: "",
+                expiryDate: "",
+                cvc: "",
+                saveData: false
+            }));
         }
         toast({
             type: 'success',
@@ -57,7 +71,7 @@ const CheckoutView = () => {
                     <Form.Field>
                         <label>Full Name</label>
                         <input type="text" name="firstname" placeholder="John Doe"
-                            value={form.fullName} onChange={e => setForm({...form, fullName: e.target.value})}
+                               value={form.fullName} onChange={e => setForm({...form, fullName: e.target.value})}
                         />
                     </Form.Field>
                     <Form.Field>
@@ -123,8 +137,8 @@ const CheckoutView = () => {
                     </Form.Group>
                     <Form.Group widths={"equal"}>
                         <Form.Field>
-                            <Checkbox label='Save User Details?' checked={form.saveData}
-                                      onChange={e => setForm({...form, saveData: e.target.value})}/>
+                            <Checkbox toggle label='Save User Details?' checked={form.saveData}
+                                      onChange={(e, data) => setForm({...form, saveData: data.checked})}/>
                         </Form.Field>
                         <Form.Field>
                             <Button fluid color={"teal"} type='submit' onClick={() => {
