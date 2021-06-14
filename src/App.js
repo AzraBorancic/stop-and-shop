@@ -39,7 +39,7 @@ if (!localStorage.getItem("cart")) {
 
 const AppRouter = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
         <SemanticToastContainer />
         <Navbar />
         <Container style={{height: "auto", minHeight: "51vh", marginTop: '10em'}}>
