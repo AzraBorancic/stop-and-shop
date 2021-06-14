@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -39,16 +39,13 @@ if (!localStorage.getItem("cart")) {
 
 const AppRouter = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <SemanticToastContainer />
         <Navbar />
         <Container style={{height: "auto", minHeight: "51vh", marginTop: '10em'}}>
             <div>
                 <Switch>
                     <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route path="/shop-and-shop">
                         <Home />
                     </Route>
                     <Route path="/categories/:category_name/:item_id?">
