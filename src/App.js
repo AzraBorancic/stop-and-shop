@@ -48,6 +48,9 @@ const AppRouter = () => {
                     <Route exact path="/">
                         <Home />
                     </Route>
+                    <Route path="/shop-and-shop">
+                        <Home />
+                    </Route>
                     <Route path="/categories/:category_name/:item_id?">
                         <CategoryView />
                     </Route>
